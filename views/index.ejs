@@ -1,4 +1,19 @@
 <%- include('./header.ejs') %>
+<div class="container">
+    <h1>Budgeter</h1>
+</div>
+<table>
+    <% for (let i = 0; i < Budget.length ; i++){ %>
+        <tr>
+            <td><a href = ""><%= Budget[i].name %></a></td>
+            <td><%= Budget[i].date %></td>
+            <td><%= Budget[i].from %></td>
+            <td><%= Budget[i].amount %></td>
+            <td><%= Budget[i].tags %></td>  
+            <br>
+        </tr>
+   <% } %>
 
+</table>
 </body>
 </html>
