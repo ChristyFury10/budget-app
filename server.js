@@ -13,6 +13,7 @@ app.get("/", (req, res)=>{
 })
 
 app.get("/budget/new", (req, res)=>{
+    req.body.amount = parseInt(req.body.amount);
     res.render("new.ejs")
 });
 

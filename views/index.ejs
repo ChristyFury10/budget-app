@@ -1,7 +1,19 @@
 <%- include('./header.ejs') %>
-<div class="container">
+
+
+<% let balance = 0;
+        for (let i = 0; i < Budget.length ; i++){
+            parseInt(Budget[i].amount)
+            balance += Budget[i].amount;
+            console.log(Budget[i].amount)
+        } %> 
+
+        <div class="container">
     <h1>Budgeter</h1>
+    <h3>Account balance: <%= balance%>
+    </h3>
 </div>
+<button onclick="window.location.href='/budget/new';">Make Deposit Entry</button>
 <table>
     <% for (let i = 0; i < Budget.length ; i++){ %>
         <tr>
