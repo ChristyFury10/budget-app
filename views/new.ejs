@@ -1,0 +1,18 @@
+<%- include('./header.ejs') %>
+
+<div class="container">
+<h1>New Deposit/withdrawl</h1>
+<form method="POST" action="/budget">
+    <input type="text" placeholder="date" name="date" id="date">
+    <br>
+    <input type="text" placeholder="name" name="name" id="name">
+    <br>
+    <input type="text" placeholder="amount" name="amount" id="amount">
+    <br>
+    <input type="text" placeholder="from" name="from" id="from">
+    <br>
+
+    <input type="submit" value="Deposit" />
+</form>
+
+</div>

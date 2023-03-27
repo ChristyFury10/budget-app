@@ -12,9 +12,18 @@ app.get("/", (req, res)=>{
     res.render("index.ejs", {Budget})
 })
 
+app.get("/budget/new", (req, res)=>{
+    res.render("new.ejs")
+});
+
 app.get("/budget/:id", (req, res)=>{
-    let item = Budget[req.params.id]
+    let item = Budget[req.params.id];
     res.render("show.ejs", {item})
+})
+
+app.post("/budget", (req, res)=>{
+    Budget.push(req.body);
+    res.redirect("/");
 })
 
 app.listen(PORT, () => {

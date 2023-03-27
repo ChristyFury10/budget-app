@@ -8,12 +8,15 @@
     <h4><%=item.from%></h4>
     AMOUNT
     <h4><%=item.amount%></h4>
+    
+    <% if (item.tags){%>
     TAGS:
     <h4><% for (let i = 0; i<item.tags.length; i ++)
         { %>
         <h3><%= item.tags[i] %></h3>
     <% } %>
         </h4>
+    <%}%>
     <button onclick="window.location.href='/';">Back</button>
 </div>
 
