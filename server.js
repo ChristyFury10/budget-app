@@ -23,6 +23,7 @@ app.get("/budget/:id", (req, res)=>{
 })
 
 app.post("/budget", (req, res)=>{
+    req.body.amount = parseInt(req.body.amount);
     Budget.push(req.body);
     res.redirect("/");
 })
