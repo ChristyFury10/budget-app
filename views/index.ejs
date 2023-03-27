@@ -10,8 +10,18 @@
 
         <div class="container">
     <h1>Budgeter</h1>
-    <h3 class = "balance">Account balance: <%= balance%>
-    </h3>
+
+        <% if(balance <= 0){ %>
+         <h3 class="negBalance">Account balance: <%= balance%></h3>
+            <%}%>
+        <% if(balance >= 1000){ %>
+            <h3 class="lrgBalance">Account balance: <%= balance%></h3>
+            <%}%>
+        <% if(balance > 0 && balance < 1000){ %>
+                <h3>Account balance: <%= balance%></h3>
+                <%}%>
+        
+    
 </div>
 <button onclick="window.location.href='/budget/new';">Make Deposit Entry</button>
 <table>
