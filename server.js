@@ -12,6 +12,11 @@ app.get("/", (req, res)=>{
     res.render("index.ejs", {Budget})
 })
 
+app.get("/budget/:id", (req, res)=>{
+    let item = Budget[req.params.id]
+    res.render("show.ejs", {item})
+})
+
 app.listen(PORT, () => {
     console.log(`🏝️ Server is listening to PORT ${PORT} 🎧`)
 })

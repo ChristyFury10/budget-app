@@ -5,7 +5,7 @@
 <table>
     <% for (let i = 0; i < Budget.length ; i++){ %>
         <tr>
-            <td><a href = ""><%= Budget[i].name %></a></td>
+            <td><a href = "/budget/<%= i%>"><%= Budget[i].name %></a></td>
             <td><%= Budget[i].date %></td>
             <td><%= Budget[i].from %></td>
             <td><%= Budget[i].amount %></td>
